@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE = "b11669"
-HELPER_URL = "https://github.com/simdsz1z/observer-ai/releases/download/v0.3.0/observer-runtime-windows-x64.exe"
+HELPER_URL = "https://github.com/simdsz1z/observer-ai/releases/download/v0.3.1/observer-runtime-windows-x64.exe"
 HELPER_SIZE = 179712
 HELPER_SHA256 = "7fc1249739e1996d62311918cdc55006d9e6e449c7095802db3a09923f715653"
 RUNTIME_SHA256 = "2c07574e7bde71321cb785282b20cc821e951132149eeceeea32ddebdbf0598e"

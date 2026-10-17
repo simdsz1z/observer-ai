@@ -14,7 +14,7 @@ This workspace's helper was built using the existing Visual Studio 2022 MSVC Bui
 
     .venv/Scripts/python.exe scripts/build_observer_runtime.py
 
-The script downloads headers from the pinned ggml-org/llama.cpp b11669 tag and nlohmann JSON v3.12.0, derives import libraries from the installed DLL exports, and compiles `.runtime/llama-b11669-vulkan/observer-runtime.exe`. No system libraries or model weights are replaced. The helper is specific to this pinned runtime and must be rebuilt/reverified when changing that runtime. The standard setup downloads the hash-verified prebuilt v0.3.0 helper from GitHub Releases, so MSVC is only needed to rebuild it. Without the helper, the app can continue in CLI fallback mode.
+The script downloads headers from the pinned ggml-org/llama.cpp b11669 tag and nlohmann JSON v3.12.0, derives import libraries from the installed DLL exports, and compiles `.runtime/llama-b11669-vulkan/observer-runtime.exe`. No system libraries or model weights are replaced. The helper is specific to this pinned runtime and must be rebuilt/reverified when changing that runtime. The standard setup downloads the hash-verified prebuilt v0.3.1 helper from GitHub Releases, so MSVC is only needed to rebuild it. Without the helper, the app can continue in CLI fallback mode.
 
 ## Verification and limits
 
