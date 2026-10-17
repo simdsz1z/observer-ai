@@ -35,7 +35,7 @@ Launch directly into chat with `.venv\Scripts\python.exe -m observer --chat`.
 
 Qwen can read visible text even when an editor exposes little accessibility text, provided accessibility responds to the privacy check. Screenshot archiving is separate from local analysis. Video frames stay in a bounded RAM buffer; temporary MP4 and prompt files are removed after inference, failure, or cancellation and stale files are removed on startup. No video archive is retained or exported. Optional single-frame mode uses temporary JPEGs. Enable image archiving if you want reviewed screenshots in website exports.
 
-See [the video implementation and verification notes](docs/live-video.md) for details.
+See [the video implementation and verification notes](live-video.md) for details.
 
 ## Collected data
 

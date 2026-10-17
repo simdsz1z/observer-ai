@@ -162,7 +162,7 @@ def install():
         raise RuntimeError("The official runtime archive did not contain llama-mtmd-cli.exe")
     helper = executable.parent / "observer-runtime.exe"
     download(HELPER_URL, helper, HELPER_SIZE, HELPER_SHA256)
-    manifest = {"helper": str(helper), "helper_sha256": HELPER_SHA256,"model": "Qwen3-VL-2B-Instruct", "runtime_release": RELEASE,
+    manifest = {"helper": str(helper), "helper_sha256": HELPER_SHA256, "model": "Qwen3-VL-2B-Instruct", "runtime_release": RELEASE,
                 "runtime_archive_sha256": digest(archive), "executable": str(executable),
                 "model_path": str(model_dir / FILES[0][0]), "projector_path": str(model_dir / FILES[1][0]),
                 "files": [{"name": name, "size": size, "sha256": sha} for name, size, sha in FILES]}
