@@ -1,0 +1,11 @@
+name: Feature request
+description: Suggest a focused improvement to local screen intelligence.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would this help you do?
+      description: Describe your workflow, the current difficulty, and the behavior you would like.
+    validations:
+      required: true

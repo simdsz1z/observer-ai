@@ -1,0 +1,18 @@
+name: Bug report
+description: Report a reproducible problem using safe sample data.
+labels: [bug]
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Include reproduction steps, expected behavior, and actual behavior. Never attach private desktop captures or credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Observer version, Windows version, GPU/VRAM, model settings, and relevant redacted error text.
+    validations:
+      required: true
