@@ -102,6 +102,8 @@ class LocalQwenChat(LocalQwenObserver):
             raise ObserverFailure("video_duration_unavailable") from None
 
     def reply(self, question, history, context, stop, *, video=None, start=0.0, end=0.0, fps=1.0, progress=lambda text: None):
+        if stop.is_set():
+            raise ObserverFailure("cancelled")
         started = time.monotonic()
         prompt = conversation_prompt(question, history, context)
         if video is None:

@@ -84,6 +84,9 @@ def test_video_range_and_stop_do_not_leave_temporary_files(tmp_path, monkeypatch
         runner.reply("describe", [], [], threading.Event(), video="example.mp4", start=21)
     stop = threading.Event()
     stop.set()
+    def unexpected_probe(path, stop):
+        pytest.fail("An already-cancelled request must not inspect the video")
+    monkeypatch.setattr(runner, "probe_video", unexpected_probe)
     with pytest.raises(ObserverFailure, match="cancelled"):
         runner.reply("describe", [], [], stop, video="example.mp4")
     assert list(tmp_path.iterdir()) == []
